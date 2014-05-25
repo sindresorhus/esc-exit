@@ -1,20 +1,20 @@
 'use strict';
 var readline = require('readline');
+var rl;
 
 module.exports = function () {
-	// don't unref if it's already listened to
-	if (process.stdin.listeners('keypress').length === 0) {
-		process.stdin.unref();
-	}
-
-	readline.createInterface({
+	rl = readline.createInterface({
 		input: process.stdin,
 		output: process.stdout
 	});
 
-	process.stdin.on('keypress', function(s, key) {
+	process.stdin.on('keypress', function(ch, key) {
 		if (key && key.name === 'escape') {
 			process.exit();
 		}
 	});
+};
+
+module.exports.done = function () {
+	rl.close();
 };
