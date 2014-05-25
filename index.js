@@ -7,14 +7,13 @@ module.exports = function () {
 		process.stdin.unref();
 	}
 
-	var rl = readline.createInterface({
+	readline.createInterface({
 		input: process.stdin,
 		output: process.stdout
 	});
 
-
 	process.stdin.on('keypress', function(s, key) {
-		if (key.name === 'escape') {
+		if (key && key.name === 'escape') {
 			process.exit();
 		}
 	});
