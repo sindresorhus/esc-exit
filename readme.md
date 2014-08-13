@@ -7,7 +7,7 @@ Useful for CLI tools to let the user press <kbd>esc</kbd> to get out.
 
 ## Install
 
-```bash
+```sh
 $ npm install --save esc-exit
 ```
 

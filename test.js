@@ -1,6 +1,6 @@
 'use strict';
 var assert = require('assert');
-var escExit = require('./index');
+var escExit = require('./');
 
 it('should exit when Esc is pressed', function (cb) {
 	setTimeout(function () {}, 20000);
