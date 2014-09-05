@@ -1,4 +1,4 @@
 'use strict';
-var escExit = require('./index');
+var escExit = require('./');
 escExit();
 escExit.done();
