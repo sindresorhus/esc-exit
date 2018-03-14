@@ -1,6 +1,6 @@
 {
   "name": "esc-exit",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Exit the process when the `esc` key is pressed",
   "license": "MIT",
   "repository": "sindresorhus/esc-exit",
@@ -13,7 +13,7 @@
     "node": ">=0.10.0"
   },
   "scripts": {
-    "test": "mocha && node test-done.js"
+    "test": "mocha"
   },
   "files": [
     "index.js"

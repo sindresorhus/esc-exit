@@ -1,20 +1,13 @@
 'use strict';
 var readline = require('readline');
-var rl;
+
+// allows to listen to events from stdin.
+readline.emitKeypressEvents(process.stdin);
 
 module.exports = function () {
-	rl = readline.createInterface({
-		input: process.stdin,
-		output: process.stdout
-	});
-
-	process.stdin.on('keypress', function(ch, key) {
+	process.stdin.on('keypress', (str, key) => {
 		if (key && key.name === 'escape') {
 			process.exit();
 		}
 	});
-};
-
-module.exports.done = function () {
-	rl.close();
 };
