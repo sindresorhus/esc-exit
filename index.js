@@ -1,5 +1,5 @@
 'use strict';
-const readline = require('readline');
+var readline = require('readline');
 
 // allows to listen to events from stdin.
 readline.emitKeypressEvents(process.stdin);
