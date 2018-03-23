@@ -1,20 +1,21 @@
 'use strict';
-var readline = require('readline');
-var rl;
+const readline = require('readline');
 
-module.exports = function () {
+let rl;
+
+module.exports = () => {
 	rl = readline.createInterface({
 		input: process.stdin,
 		output: process.stdout
 	});
 
-	process.stdin.on('keypress', function(ch, key) {
+	process.stdin.on('keypress', (ch, key) => {
 		if (key && key.name === 'escape') {
-			process.exit();
+			process.exit(); // eslint-disable-line unicorn/no-process-exit
 		}
 	});
 };
 
-module.exports.done = function () {
+module.exports.done = () => {
 	rl.close();
 };

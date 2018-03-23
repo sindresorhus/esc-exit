@@ -1,37 +1,40 @@
 {
-  "name": "esc-exit",
-  "version": "1.0.1",
-  "description": "Exit the process when the `esc` key is pressed",
-  "license": "MIT",
-  "repository": "sindresorhus/esc-exit",
-  "author": {
-    "name": "Sindre Sorhus",
-    "email": "sindresorhus@gmail.com",
-    "url": "http://sindresorhus.com"
-  },
-  "engines": {
-    "node": ">=0.10.0"
-  },
-  "scripts": {
-    "test": "mocha && node test-done.js"
-  },
-  "files": [
-    "index.js"
-  ],
-  "keywords": [
-    "esc",
-    "exit",
-    "process",
-    "key",
-    "press",
-    "stdin",
-    "readline",
-    "event",
-    "escape",
-    "cli",
-    "tool"
-  ],
-  "devDependencies": {
-    "mocha": "*"
-  }
+	"name": "esc-exit",
+	"version": "1.0.1",
+	"description": "Exit the process when the `esc` key is pressed",
+	"license": "MIT",
+	"repository": "sindresorhus/esc-exit",
+	"author": {
+		"name": "Sindre Sorhus",
+		"email": "sindresorhus@gmail.com",
+		"url": "sindresorhus.com"
+	},
+	"engines": {
+		"node": ">=6"
+	},
+	"scripts": {
+		"test": "xo && ava"
+	},
+	"files": [
+		"index.js"
+	],
+	"keywords": [
+		"esc",
+		"exit",
+		"process",
+		"key",
+		"press",
+		"stdin",
+		"readline",
+		"event",
+		"escape",
+		"cli",
+		"tool"
+	],
+	"devDependencies": {
+		"ava": "*",
+		"delay": "^2.0.0",
+		"execa": "^0.10.0",
+		"xo": "*"
+	}
 }

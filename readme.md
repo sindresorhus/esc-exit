@@ -7,15 +7,15 @@ Useful for CLI tools to let the user press <kbd>esc</kbd> to get out.
 
 ## Install
 
-```sh
-$ npm install --save esc-exit
+```
+$ npm install esc-exit
 ```
 
 
 ## Usage
 
 ```js
-var escExit = require('esc-exit');
+const escExit = require('esc-exit');
 
 escExit();
 ```
@@ -36,4 +36,4 @@ There are multiple ways you can handle this:
 
 ## License
 
-MIT © [Sindre Sorhus](http://sindresorhus.com)
+MIT © [Sindre Sorhus](https://sindresorhus.com)

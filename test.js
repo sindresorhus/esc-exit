@@ -1,16 +1,10 @@
-'use strict';
-var assert = require('assert');
-var escExit = require('./');
+import test from 'ava';
+import execa from 'execa';
+import delay from 'delay';
 
-it('should exit when Esc is pressed', function (cb) {
-	setTimeout(function () {}, 20000);
-
-	process.exit = function () {
-		assert(true);
-		cb();
-	};
-
-	escExit();
-
+test('exit when `esc` key is pressed', async t => {
+	const cp = execa(process.execPath, ['fixture.js'], {reject: false});
+	await delay(100);
 	process.stdin.emit('keypress', '', {name: 'escape'});
+	t.is(cp.exitCode, 1);
 });
