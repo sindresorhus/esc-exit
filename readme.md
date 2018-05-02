@@ -27,9 +27,7 @@ Using this prevents the process from exiting normally.
 
 There are multiple ways you can handle this:
 
-- Call `escExit.done()` when you're done listening. It will then let the process exit normally.
-
-- Use `process.stdin.unref()` if you don't intend to use `procces.stdin` afterwards. It will let the process exit normally.
+- Call the unsubscribe method that `escExit()` returns when you're done listening. It will then let the process exit normally.
 
 - Call `process.exit()` to exit the process directly.
 

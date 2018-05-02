@@ -1,21 +1,26 @@
 'use strict';
 const readline = require('readline');
 
-let rl;
-
 module.exports = () => {
-	rl = readline.createInterface({
-		input: process.stdin,
-		output: process.stdout
-	});
+	readline.emitKeypressEvents(process.stdin);
 
-	process.stdin.on('keypress', (ch, key) => {
+	if (process.stdin.isTTY) {
+		process.stdin.setRawMode(true);
+	}
+
+	const listener = (ch, key) => {
 		if (key && key.name === 'escape') {
 			process.exit(); // eslint-disable-line unicorn/no-process-exit
 		}
-	});
-};
+	};
 
-module.exports.done = () => {
-	rl.close();
+	process.stdin.on('keypress', listener);
+
+	return () => {
+		process.stdin.on('keypress', listener);
+
+		if (process.stdin.isTTY) {
+			process.stdin.setRawMode(false);
+		}
+	};
 };
