@@ -17,7 +17,7 @@ module.exports = () => {
 	process.stdin.on('keypress', listener);
 
 	return () => {
-		process.stdin.removeEventListener('keypress', listener);
+		process.stdin.removeListener('keypress', listener);
 
 		if (process.stdin.isTTY) {
 			process.stdin.setRawMode(false);
