@@ -9,7 +9,14 @@ module.exports = () => {
 	}
 
 	const listener = (ch, key) => {
-		if (key && key.name === 'escape') {
+		if (!key) {
+			return;
+		}
+
+		if (
+			key.name === 'escape' ||
+			(key.ctrl && key.name === 'c')
+		) {
 			process.exit(); // eslint-disable-line unicorn/no-process-exit
 		}
 	};
