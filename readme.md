@@ -2,7 +2,7 @@
 
 > Exit the process when the <kbd>esc</kbd> key is pressed
 
-Useful for CLI tools to let the user press <kbd>esc</kbd> to get out.
+Useful for CLI tools to let the user press <kbd>esc</kbd> or <kbd>control+c</kbd> to get out.
 
 
 ## Install
