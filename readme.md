@@ -1,4 +1,4 @@
-# esc-exit [![Build Status](https://travis-ci.org/sindresorhus/esc-exit.svg?branch=master)](https://travis-ci.org/sindresorhus/esc-exit)
+# esc-exit
 
 > Exit the process when the <kbd>esc</kbd> key is pressed
 
