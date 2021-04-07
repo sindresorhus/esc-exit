@@ -1,5 +1,4 @@
-'use strict';
-const escExit = require('.');
+import escExit from './index.js';
 
 escExit();
 process.on('exit', {});

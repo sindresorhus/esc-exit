@@ -1,7 +1,6 @@
-'use strict';
-const readline = require('readline');
+import readline from 'readline';
 
-module.exports = () => {
+export default function escExit() {
 	readline.emitKeypressEvents(process.stdin);
 
 	if (process.stdin.isTTY) {
@@ -24,11 +23,10 @@ module.exports = () => {
 	process.stdin.on('keypress', listener);
 
 	return () => {
-		// TODO: Use `.on` instead when targeting Node.js 10
-		process.stdin.removeListener('keypress', listener);
+		process.stdin.on('keypress', listener);
 
 		if (process.stdin.isTTY) {
 			process.stdin.setRawMode(false);
 		}
 	};
-};
+}
