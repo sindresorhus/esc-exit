@@ -6,8 +6,8 @@ Useful for CLI tools to let the user press <kbd>esc</kbd> or <kbd>control+c</kbd
 
 ## Install
 
-```
-$ npm install esc-exit
+```sh
+npm install esc-exit
 ```
 
 ## Usage
