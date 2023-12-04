@@ -23,7 +23,7 @@ export default function escExit() {
 	process.stdin.on('keypress', listener);
 
 	return () => {
-		process.stdin.on('keypress', listener);
+		process.stdin.off('keypress', listener);
 
 		if (process.stdin.isTTY) {
 			process.stdin.setRawMode(false);
