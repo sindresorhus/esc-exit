@@ -1,5 +1,5 @@
 import test from 'ava';
-import {execa} from 'execa';
+import execa from 'execa';
 import delay from 'delay';
 
 test('exit when `esc` key is pressed', async t => {
